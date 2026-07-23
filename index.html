@@ -1,86 +1,42 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lớp Second Brain - Bộ não thứ 2</title><style>
-:root{--bg:#0f0f0f;--card:#181818;--card2:#212121;--txt:#f1f1f1;--sub:#aaa;--accent:#3ea6ff;--hl:#263850;--imp:#3a2c10;--imp-bd:#f0b429}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',Roboto,Arial,sans-serif;line-height:1.4}
-a{color:inherit;text-decoration:none}
-header{position:sticky;top:0;z-index:10;background:#0f0f0f;border-bottom:1px solid #272727;padding:10px 18px;display:flex;align-items:center;gap:12px}
-header .logo{font-weight:700;font-size:17px}
-header .logo b{color:var(--accent)}
-header .sub{color:var(--sub);font-size:13px;margin-left:auto}
-.wrap{max-width:1400px;margin:0 auto;padding:20px}
-/* watch layout */
-.watch{display:grid;grid-template-columns:1fr 400px;gap:24px}
-.player video{width:100%;border-radius:12px;background:#000;aspect-ratio:16/9}
-.vtitle{font-size:20px;font-weight:700;margin:16px 0 6px}
-.vmeta{color:var(--sub);font-size:14px;margin-bottom:14px}
-.badge{display:inline-block;background:var(--card2);color:var(--sub);font-size:12px;padding:3px 10px;border-radius:20px;margin-right:8px}
-.navbtns{display:flex;gap:10px;margin:16px 0}
-.navbtns a{background:var(--card2);padding:9px 16px;border-radius:20px;font-size:14px;font-weight:600}
-.navbtns a.next{background:var(--accent);color:#0f0f0f}
-.navbtns a.disabled{opacity:.4;pointer-events:none}
-.side h3{font-size:14px;color:var(--sub);text-transform:uppercase;letter-spacing:.4px;margin:18px 0 10px}
-.side h3:first-child{margin-top:0}
-.item{display:flex;gap:10px;padding:8px;border-radius:10px;margin-bottom:6px}
-.item:hover{background:var(--card)}
-.item.active{background:var(--hl)}
-.item .th{position:relative;flex:0 0 160px}
-.item .th img{width:160px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#000;display:block}
-.item .th .d{position:absolute;right:5px;bottom:5px;background:rgba(0,0,0,.85);font-size:11px;padding:1px 5px;border-radius:4px}
-.item .meta{min-width:0}
-.item .meta .t{font-size:14px;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.item .meta .n{font-size:12px;color:var(--sub);margin-top:4px}
-.item.active .meta .n{color:var(--accent)}
-/* home grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
-.card{background:var(--card);border-radius:12px;overflow:hidden;transition:transform .1s}
-.card:hover{transform:translateY(-3px)}
-.card .th{position:relative}
-.card .th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
-.card .th .d{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.85);font-size:12px;padding:2px 6px;border-radius:4px}
-.card .b{padding:11px 13px}
-.card .b .t{font-size:15px;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:42px}
-.card .b .n{font-size:12px;color:var(--sub);margin-top:6px}
-.sec-title{font-size:18px;font-weight:700;margin:26px 0 14px;padding-left:10px;border-left:4px solid var(--accent)}
-.hero{font-size:26px;font-weight:800;margin-bottom:6px}
-.hero-sub{color:var(--sub);margin-bottom:10px}
-@media(max-width:1000px){.watch{grid-template-columns:1fr}}
-.card.important{background:var(--imp);box-shadow:inset 0 0 0 2px var(--imp-bd)}.item.important{box-shadow:inset 0 0 0 1px var(--imp-bd)}.item.important:not(.active){background:var(--imp)}.card.important .b .t::before,.item.important .meta .t::before{content:"\2b50\00a0"}.imp-page .player video{box-shadow:0 0 0 3px var(--imp-bd)}.imp-page .vtitle{color:var(--imp-bd)}.imp-page .vmeta::before{content:"\2B50\0000A0Bài quan trọng";display:inline-block;background:var(--imp);color:var(--imp-bd);box-shadow:inset 0 0 0 1px var(--imp-bd);font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;margin-right:8px}</style></head><body>
-<header><div class="logo"><a href="index.html">🧠 <b>Second Brain</b></a></div><div class="sub">Lớp Second Brain - Bộ não thứ 2</div></header>
-<div class="wrap">
-<div class="hero">🧠 Lớp Second Brain - Bộ não thứ 2</div>
-<div class="hero-sub">Bộ video buổi học - xem theo thứ tự từ Bài 1. Bấm vào từng video để xem.</div>
-<div class="sec-title">Buổi 1 (12 video)</div>
-<div class="grid">
-<a class="card important" href="v1.html"><div class="th"><img loading="lazy" src="thumbs/1.jpg" alt=""><span class="d">4:51</span></div><div class="b"><div class="t">Bài 1. Vì sao cần bộ não thứ 2</div><div class="n">Video 1/26 · 4:51</div></div></a>
-<a class="card" href="v2.html"><div class="th"><img loading="lazy" src="thumbs/2.jpg" alt=""><span class="d">8:50</span></div><div class="b"><div class="t">Bài 2. AI chạy trên máy + các loại AI</div><div class="n">Video 2/26 · 8:50</div></div></a>
-<a class="card" href="v3.html"><div class="th"><img loading="lazy" src="thumbs/3.jpg" alt=""><span class="d">8:25</span></div><div class="b"><div class="t">Bài 3. Demo bộ não thật + AI tìm dữ liệu</div><div class="n">Video 3/26 · 8:25</div></div></a>
-<a class="card" href="v4.html"><div class="th"><img loading="lazy" src="thumbs/4.jpg" alt=""><span class="d">4:30</span></div><div class="b"><div class="t">Bài 4. Tạo Vault đầu tiên</div><div class="n">Video 4/26 · 4:30</div></div></a>
-<a class="card" href="v5.html"><div class="th"><img loading="lazy" src="thumbs/5.jpg" alt=""><span class="d">25:12</span></div><div class="b"><div class="t">Bài 5. Liên kết giữa các ghi chú (dấu ngoặc vuông)</div><div class="n">Video 5/26 · 25:12</div></div></a>
-<a class="card" href="v6.html"><div class="th"><img loading="lazy" src="thumbs/6.jpg" alt=""><span class="d">9:43</span></div><div class="b"><div class="t">Bài 6. Cài Web Clipper lưu bài web</div><div class="n">Video 6/26 · 9:43</div></div></a>
-<a class="card important" href="v7.html"><div class="th"><img loading="lazy" src="thumbs/7.jpg" alt=""><span class="d">15:34</span></div><div class="b"><div class="t">Bài 7. File luật AGENTS CLAUDE cho AI</div><div class="n">Video 7/26 · 15:34</div></div></a>
-<a class="card important" href="v8.html"><div class="th"><img loading="lazy" src="thumbs/8.jpg" alt=""><span class="d">38:34</span></div><div class="b"><div class="t">Bài 8. Đổi tên file luật + kéo vào vault + kết nối AI</div><div class="n">Video 8/26 · 38:34</div></div></a>
-<a class="card important" href="v9.html"><div class="th"><img loading="lazy" src="thumbs/9.jpg" alt=""><span class="d">22:53</span></div><div class="b"><div class="t">Bài 9. Gõ Hello - AI đọc luật + phỏng vấn hồ sơ</div><div class="n">Video 9/26 · 22:53</div></div></a>
-<a class="card" href="v10.html"><div class="th"><img loading="lazy" src="thumbs/10.jpg" alt=""><span class="d">14:19</span></div><div class="b"><div class="t">Bài 10. Giải thích file hệ thống + làm mẫu hồ sơ</div><div class="n">Video 10/26 · 14:19</div></div></a>
-<a class="card" href="v11.html"><div class="th"><img loading="lazy" src="thumbs/11.jpg" alt=""><span class="d">15:52</span></div><div class="b"><div class="t">Bài 11. Chọn model AI + AI tự sắp xếp file</div><div class="n">Video 11/26 · 15:52</div></div></a>
-<a class="card important" href="v12.html"><div class="th"><img loading="lazy" src="thumbs/12.jpg" alt=""><span class="d">6:56</span></div><div class="b"><div class="t">Bài 12. Nạp dự án có sẵn vào bộ não (Care AI)</div><div class="n">Video 12/26 · 6:56</div></div></a>
-</div>
-<div class="sec-title">Buổi 2 (14 video)</div>
-<div class="grid">
-<a class="card" href="v13.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266734/second-brain/buoi2/01.jpg" alt=""><span class="d">12:11</span></div><div class="b"><div class="t">Bài 13. Cấu trúc Bộ não + các file hệ thống</div><div class="n">Video 13/26 · 12:11</div></div></a>
-<a class="card" href="v14.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266742/second-brain/buoi2/02.jpg" alt=""><span class="d">2:47</span></div><div class="b"><div class="t">Bài 14. Cuộc trò chuyện không lưu nhớ + khôi phục trí nhớ session</div><div class="n">Video 14/26 · 2:47</div></div></a>
-<a class="card important" href="v15.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266752/second-brain/buoi2/03.jpg" alt=""><span class="d">14:48</span></div><div class="b"><div class="t">Bài 15. Nạp folder vào bộ não - AI đọc, phân loại, tự sắp xếp</div><div class="n">Video 15/26 · 14:48</div></div></a>
-<a class="card" href="v16.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266757/second-brain/buoi2/04.jpg" alt=""><span class="d">1:53</span></div><div class="b"><div class="t">Bài 16. AI soát lỗi và hỏi ngược khi nạp dữ liệu</div><div class="n">Video 16/26 · 1:53</div></div></a>
-<a class="card" href="v17.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266762/second-brain/buoi2/05.jpg" alt=""><span class="d">3:05</span></div><div class="b"><div class="t">Bài 17. Lệnh xử lý nhiều file cùng lúc + kế hoạch theo lô</div><div class="n">Video 17/26 · 3:05</div></div></a>
-<a class="card important" href="v18.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266771/second-brain/buoi2/06.jpg" alt=""><span class="d">10:54</span></div><div class="b"><div class="t">Bài 18. Số hóa dự án + nâng cấp luật cho bộ não (sửa Cloud &amp; Agent MD)</div><div class="n">Video 18/26 · 10:54</div></div></a>
-<a class="card" href="v19.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266777/second-brain/buoi2/07.jpg" alt=""><span class="d">4:30</span></div><div class="b"><div class="t">Bài 19. Chế độ xin phép Allow và 5 Mode của Claude</div><div class="n">Video 19/26 · 4:30</div></div></a>
-<a class="card important" href="v20.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266786/second-brain/buoi2/08.jpg" alt=""><span class="d">12:59</span></div><div class="b"><div class="t">Bài 20. Thông tin tích cực + rà soát vault, AI đề xuất phương án</div><div class="n">Video 20/26 · 12:59</div></div></a>
-<a class="card" href="v21.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266796/second-brain/buoi2/09.jpg" alt=""><span class="d">15:10</span></div><div class="b"><div class="t">Bài 21. Kết nối và nạp file từ Google Drive, xử lý lỗi email</div><div class="n">Video 21/26 · 15:10</div></div></a>
-<a class="card important" href="v22.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266803/second-brain/buoi2/10.jpg" alt=""><span class="d">2:17</span></div><div class="b"><div class="t">Bài 22. Test AI tự lấy kiến thức trong Learn</div><div class="n">Video 22/26 · 2:17</div></div></a>
-<a class="card" href="v23.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266823/second-brain/buoi2/11.jpg" alt=""><span class="d">4:24</span></div><div class="b"><div class="t">Bài 23. Cách để AI tự lôi và áp dụng kiến thức Learn</div><div class="n">Video 23/26 · 4:24</div></div></a>
-<a class="card" href="v24.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266831/second-brain/buoi2/12.jpg" alt=""><span class="d">11:37</span></div><div class="b"><div class="t">Bài 24. Q&amp;A anh Hưng + Tạo Skill riêng</div><div class="n">Video 24/26 · 11:37</div></div></a>
-<a class="card" href="v25.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266836/second-brain/buoi2/13.jpg" alt=""><span class="d">4:21</span></div><div class="b"><div class="t">Bài 25. Đóng gói cuối session thành Skill</div><div class="n">Video 25/26 · 4:21</div></div></a>
-<a class="card" href="v26.html"><div class="th"><img loading="lazy" src="https://res.cloudinary.com/dedgfzm9g/video/upload/so_2,w_480,h_270,c_fill/v1783266841/second-brain/buoi2/14.jpg" alt=""><span class="d">2:59</span></div><div class="b"><div class="t">Bài 26. Hỏi đáp sao lưu và đồng bộ (Obsidian Sync, Drive)</div><div class="n">Video 26/26 · 2:59</div></div></a>
-</div>
-</div></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Lớp Second Brain - Bộ não thứ 2 | Trang học</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="backdrop" id="backdrop"></div>
+
+    <aside class="sidebar">
+      <div class="brand">
+        <h1><span class="logo">🧠</span> Lớp Second Brain</h1>
+        <div class="sub">Bộ não thứ 2 · lớp học nội bộ</div>
+      </div>
+      <div class="progress">
+        <div class="bar"><i id="bar"></i></div>
+        <div class="txt" id="ptxt">Đã xem 0/0 bài · 0%</div>
+      </div>
+      <nav id="nav"></nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <button class="menubtn" id="menuBtn" aria-label="Menu">☰</button>
+        <h2 id="topTitle">Trang học</h2>
+        <div class="topprog" id="topProg"></div>
+      </div>
+      <div id="content"></div>
+    </main>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
